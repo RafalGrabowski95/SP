@@ -1,0 +1,7 @@
+.cache
+package-lock.json
+package.json
+android
+ios
+vendor
+*.yaml

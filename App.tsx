@@ -65,8 +65,7 @@ const App = () => {
         <Header />
         <View >
           <Section title="Step One">
-            Edit <Text>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            T E S T
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
