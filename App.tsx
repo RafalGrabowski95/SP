@@ -65,7 +65,7 @@ const App = () => {
         <Header />
         <View >
           <Section title="Step One">
-            T E S T 2
+            T E S T 2 2
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
