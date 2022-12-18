@@ -1,0 +1,1 @@
+export { TreningsListScreen } from './TreningsListScreen';
