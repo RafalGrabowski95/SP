@@ -5,37 +5,49 @@ import { CreatorTreningsScreen } from '../../screens/CreatorTreningsScreen';
 import { Main } from '../../screens/MainScreen';
 import { ExerciseScreen } from '../../screens/ExerciseScreen';
 import { TreningsListScreen } from '../../screens/TreningsListScreen';
+ 
+const navigationOptionsForAll = {
+  headerShown: false,
+};
 
 interface NavigationProps {
   children: React.ReactNode;
 }
 
-const Stack = createNativeStackNavigator();
+export type ScreensList = {
+  Main: undefined,
+  ExerciseScreen: undefined,
+  CreatorTreningsScreen: undefined,
+  TreningsListScreen: undefined,
+};
+ 
+const Stack = createNativeStackNavigator<ScreensList>();
 
 export const Navigation = ({ children }: NavigationProps) => {
+ 
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
           name="ExerciseScreen"
           component={ExerciseScreen}
-          options={{ headerShown: false }}
+          options={navigationOptionsForAll}
         />
         <Stack.Screen
           name="Main"
           component={Main}
-          options={{ headerShown: false }}
+          options={navigationOptionsForAll}
         />
         <Stack.Screen
           name="CreatorTreningsScreen"
           component={CreatorTreningsScreen}
-          options={{ headerShown: false }}
+          options={navigationOptionsForAll}
         />
 
         <Stack.Screen
           name="TreningsListScreen"
           component={TreningsListScreen}
-          options={{ headerShown: false }}
+          options={navigationOptionsForAll}
         />
       </Stack.Navigator>
       {children}

@@ -1,8 +1,8 @@
-import {Text} from '../../atoms/Text';
+import { Text } from '../../atoms/Text';
 import React from 'react';
-import {Button} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
-import {ScreensList} from '../../../constans/index';
+import { Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { ScreensList } from '../../../constans/index';
 
 export const Main = () => {
   const navigation = useNavigation();
@@ -13,7 +13,7 @@ export const Main = () => {
       <Button
         title="Go to Jane's profile"
         onPress={() =>
-          navigation.navigate('CreatorTreningsScreen', {name: 'Jane'})
+          navigation.navigate('CreatorTreningsScreen', { name: 'Jane' })
         }
       />
     </>

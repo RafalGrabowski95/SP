@@ -12,3 +12,7 @@ or used commands in two separate terminals
 npx react-native start
 npx react-native run-android
 ```
+
+Update assets (fonts/images):
+
+ npx react-native-asset

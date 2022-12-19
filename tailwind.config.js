@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    './App.{html,tsx}'
-  ],
+  content: ["./App.{js,jsx,ts,tsx}", "./components/**/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: '480px',
@@ -10,6 +8,11 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      extend: {
+        fontFamily: {
+          titilium: ["TitilliumWeb-Black"],
+        },
+      },
       spacing: {
         '128': '32rem',
         '144': '36rem',
