@@ -15,4 +15,6 @@ npx react-native run-android
 
 Update assets (fonts/images):
 
+```bash
  npx react-native-asset
+```
