@@ -1,7 +1,7 @@
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
   plugins: [
-    "nativewind/babel",
+    'nativewind/babel',
     [
       'module-resolver',
       {
@@ -13,10 +13,14 @@ module.exports = {
           '.android.js',
           '.android.tsx',
           '.ios.js',
-          '.ios.tsx'
+          '.ios.tsx',
         ],
-        root: ['.']
-      }
-    ]
-  ]
+        root: ['.'],
+        alias: {
+          // This needs to be mirrored in tsconfig.json
+          components: './components',
+        },
+      },
+    ],
+  ],
 };

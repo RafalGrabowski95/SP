@@ -1,18 +1,12 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { withExpoSnack } from 'nativewind';
-import { Navigation } from './components/organisms/Navigation';
-import { Text } from './components/atoms/Text';
+import { Navigation } from 'components/organisms/Navigation';
 
 const App = () => {
   return (
     <Navigation>
-      <SafeAreaView>
-        <Text className='font-titilium text-2xl'>
-          asdsad
-        </Text>
-
-      </SafeAreaView>
+      <SafeAreaView></SafeAreaView>
     </Navigation>
   );
 };

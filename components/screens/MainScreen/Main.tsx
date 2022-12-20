@@ -1,8 +1,12 @@
-import { Text } from '../../atoms/Text';
 import React from 'react';
 import { Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { ScreensList } from '../../../constans/index';
+import { Text } from 'components/atoms/Text';
+
+export type ScreensList = {
+  CreatorTreningsScreen: undefined;
+  Main: undefined;
+};
 
 export const Main = () => {
   const navigation = useNavigation();
