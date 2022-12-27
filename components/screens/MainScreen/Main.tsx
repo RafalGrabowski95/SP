@@ -13,7 +13,7 @@ export const Main = () => {
 
   return (
     <>
-      <Text>Main 4</Text>
+      <Text>Main 5</Text>
       <Button
         title="Go to Jane's profile"
         onPress={() =>
