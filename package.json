@@ -8,10 +8,12 @@
     "start": "react-native start",
     "android-app": "npx react-native run-android",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "typescript": "tsc --project tsconfig.json --noEmit",
+    "prettier": "prettier src -check",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --color"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.1",
