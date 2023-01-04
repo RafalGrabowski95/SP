@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-staged": "lint-staged --config lint-staged.js",
     "husky-install": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build:svg": "svgr --native assets/svg --typescript -d components/atoms/icons assets/svg"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.1",
@@ -34,6 +35,8 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@svgr/cli": "^6.5.1",
+    "@svgr/webpack": "^6.5.1",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^26.0.23",
     "@types/react": "^18.0.21",

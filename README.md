@@ -18,3 +18,12 @@ Update assets (fonts/images):
 ```bash
  npx react-native-asset
 ```
+
+Create new svg components from icons svg: 
+ - upload files to assets/svg
+ - next run command 
+
+    ```bash
+    yarn build:svg
+    ```
+ - you have SVG Component in `components/atoms/icons` now
