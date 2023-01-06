@@ -19,11 +19,19 @@ Update assets (fonts/images):
  npx react-native-asset
 ```
 
-Create new svg components from icons svg: 
- - upload files to assets/svg
- - next run command 
+Create new svg components from icons svg:
 
-    ```bash
-    yarn build:svg
-    ```
- - you have SVG Component in `components/atoms/icons` now
+- upload files to assets/svg
+- next run command
+
+  ```bash
+  yarn build:svg
+  ```
+
+- you have SVG Component in `components/atoms/icons` now
+
+Clean gradlew:
+
+```bash
+cd android && ./gradlew clean && cd ..
+```
