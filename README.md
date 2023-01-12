@@ -3,7 +3,7 @@
 First, run the application used:
 
 ```bash
-npx run android-app
+npm run android-app
 ```
 
 or used commands in two separate terminals
