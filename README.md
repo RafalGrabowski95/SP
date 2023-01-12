@@ -3,7 +3,7 @@
 First, run the application used:
 
 ```bash
-npx react-native run-android
+npx run android-app
 ```
 
 or used commands in two separate terminals
@@ -25,7 +25,7 @@ Create new svg components from icons svg:
 - next run command
 
   ```bash
-  yarn build:svg
+  npm run build:svg
   ```
 
 - you have SVG Component in `components/atoms/icons` now
