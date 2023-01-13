@@ -28,7 +28,9 @@ export const Text = ({
   return (
     <StyledText
       className={classnames(
-        `font-titilium-semibold text-text-1 ${FontSizes[fontSize]} ${styles}`,
+        `font-titilium-semibold text-text-1`,
+        styles,
+        FontSizes[fontSize],
         {
           uppercase: uppercase,
           'text-text-2': primary,
