@@ -5,7 +5,8 @@ import { CreatorTreningsScreen } from '../../screens/CreatorTreningsScreen';
 import { Main } from '../../screens/MainScreen';
 import { ExerciseScreen } from '../../screens/ExerciseScreen';
 import { TreningsListScreen } from '../../screens/TreningsListScreen';
- 
+import { Settings } from 'components/screens/Settings';
+
 const navigationOptionsForAll = {
   headerShown: false,
 };
@@ -15,19 +16,24 @@ interface NavigationProps {
 }
 
 export type ScreensList = {
-  Main: undefined,
-  ExerciseScreen: undefined,
-  CreatorTreningsScreen: undefined,
-  TreningsListScreen: undefined,
+  Main: undefined;
+  ExerciseScreen: undefined;
+  CreatorTreningsScreen: undefined;
+  TreningsListScreen: undefined;
+  Settings: undefined;
 };
- 
+
 const Stack = createNativeStackNavigator<ScreensList>();
 
 export const Navigation = ({ children }: NavigationProps) => {
- 
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
+          options={navigationOptionsForAll}
+        />
         <Stack.Screen
           name="ExerciseScreen"
           component={ExerciseScreen}
