@@ -1,33 +1,54 @@
-import React from 'react';
-import { styled } from 'nativewind';
-import { Text as NativeText } from 'react-native';
 import classNames from 'classnames';
 import { View } from 'components/atoms/View';
-
-const StyledText = styled(NativeText);
+import { Text } from 'components/atoms/Text';
 
 interface IfLabelProps {
-    text?: string;
-    textSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl';
-    textWeight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
+    text?: React.ReactNode;
+    color?: 'primary' | 'secondary' | 'tetriary' | 'success' | 'danger';
     textAlign?: 'left' | 'center' | 'right' | 'justify' | 'start' | 'end';
     textUppercase?: boolean;
 }
 
-export const Label = ({ text='', textSize='base', textWeight='normal', textAlign='left', textUppercase=false }: IfLabelProps) => {
+export const Label = ({ text='', color='primary', textAlign='left', textUppercase=false }: IfLabelProps) => {
+    const getTextColor = (color: IfLabelProps['color']) => {
+        switch (color) {
+            case 'secondary':
+                return 'text-text-2';
+            case 'tetriary':
+                return 'text-text-3';
+            case 'success':
+            case 'danger':
+            case 'primary':
+            default:
+                return 'text-text-1';
+
+        }
+    }
+
+    const getBgColor = (color: IfLabelProps['color']) => {
+        switch (color) {
+            case 'secondary':
+                return 'bg-surface-2';
+            case 'tetriary':
+                return 'bg-surface-3';
+            case 'success':
+            case 'danger':
+            case 'primary':
+            default:
+                return 'bg-surface-1';
+
+        }
+    };
+
     return (
-        <View className="bg-surface-2 p-2 rounded-full">
-            <StyledText className={classNames(
-                'text-white pl-3 pr-3',
-                {
-                    [`text-${textSize}`]: true,
-                    [`text-${textWeight}`]: true,
-                    [`text-${textAlign}`]: true,
-                    'uppercase': textUppercase
-                }
-            )}>
-                {text}
-            </StyledText>
+        <View className={classNames(
+            'p-3 rounded-full',
+            `${getBgColor(color)}`,
+            {
+                'uppercase': textUppercase
+            }
+        )}>
+            {text && <Text styles={`text-${textAlign} ${getTextColor(color)}`}>{text}</Text>}
         </View>
     );
 };
