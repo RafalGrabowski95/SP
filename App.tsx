@@ -1,4 +1,3 @@
-import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { withExpoSnack } from 'nativewind';
 import { Navigation } from 'components/organisms/Navigation';

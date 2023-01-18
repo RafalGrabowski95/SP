@@ -3,7 +3,7 @@
 First, run the application used:
 
 ```bash
-npx react-native run-android
+npm run android-app
 ```
 
 or used commands in two separate terminals
@@ -17,4 +17,21 @@ Update assets (fonts/images):
 
 ```bash
  npx react-native-asset
+```
+
+Create new svg components from icons svg:
+
+- upload files to assets/svg
+- next run command
+
+  ```bash
+  npm run build:svg
+  ```
+
+- you have SVG Component in `components/atoms/icons` now
+
+Clean gradlew:
+
+```bash
+cd android && ./gradlew clean && cd ..
 ```

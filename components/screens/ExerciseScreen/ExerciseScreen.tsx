@@ -1,10 +1,9 @@
-import { Text } from 'components/atoms/Text';
-import React from 'react';
+import { Button } from 'components/atoms/Button';
 
 export const ExerciseScreen = () => {
   return (
     <>
-      <Text className="font-titilium text-2xl">ExerciseScreen</Text>
+      <Button text="co tydzień" primary />
     </>
   );
 };
