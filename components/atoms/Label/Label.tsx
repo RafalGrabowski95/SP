@@ -2,55 +2,45 @@ import classNames from 'classnames';
 import { View } from 'components/atoms/View';
 import { Text } from 'components/atoms/Text';
 
-interface IfLabelProps {
-  text?: React.ReactNode;
-  color?: 'primary' | 'secondary' | 'tetriary' | 'success' | 'danger';
+interface LabelProps {
+  text: string;
   textAlign?: 'left' | 'center' | 'right' | 'justify' | 'start' | 'end';
   textUppercase?: boolean;
+  primary?: boolean;
+  secondary?: boolean;
+  tetriary?: boolean;
+  success?: boolean;
+  danger?: boolean;
 }
 
 export const Label = ({
-  text = '',
-  color = 'primary',
-  textAlign = 'left',
+  text,
+  textAlign = 'center',
   textUppercase = false,
-}: IfLabelProps) => {
-  const getTextColor = (color: IfLabelProps['color']) => {
-    switch (color) {
-      case 'secondary':
-        return 'text-text-2';
-      case 'tetriary':
-        return 'text-text-3';
-      case 'success':
-      case 'danger':
-      case 'primary':
-      default:
-        return 'text-text-1';
-    }
-  };
-
-  const getBgColor = (color: IfLabelProps['color']) => {
-    switch (color) {
-      case 'secondary':
-        return 'bg-surface-2';
-      case 'tetriary':
-        return 'bg-surface-3';
-      case 'success':
-      case 'danger':
-      case 'primary':
-      default:
-        return 'bg-surface-1';
-    }
-  };
-
+  primary = true,
+  secondary,
+  tetriary,
+  success,
+  danger,
+}: LabelProps) => {
   return (
     <View
-      className={classNames('p-3 rounded-full', `${getBgColor(color)}`, {
-        uppercase: textUppercase,
+      className={classNames('p-3 rounded-full', {
+        'bg-surface-1': primary || success || danger,
+        'bg-surface-2': secondary,
+        'bg-surface-3': tetriary,
       })}
     >
       {text && (
-        <Text styles={`text-${textAlign} ${getTextColor(color)}`}>{text}</Text>
+        <Text
+          styles={`text-${textAlign}`}
+          primary={primary || success || danger}
+          secondary={secondary}
+          tetriary={tetriary}
+          uppercase={textUppercase}
+        >
+          {text}
+        </Text>
       )}
     </View>
   );
