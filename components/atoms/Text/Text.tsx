@@ -11,6 +11,7 @@ interface TextProps {
   uppercase?: boolean;
   primary?: boolean;
   secondary?: boolean;
+  tetriary?: boolean;
   bold?: boolean;
 }
 
@@ -21,20 +22,22 @@ export const Text = ({
   styles,
   fontSize = 'regular',
   uppercase,
-  primary,
+  primary = true,
   secondary,
+  tetriary,
   bold,
 }: TextProps) => {
   return (
     <StyledText
       className={classnames(
-        `font-titilium-semibold text-text-1`,
+        `font-titilium-semibold`,
         styles,
         FontSizes[fontSize],
         {
           uppercase: uppercase,
-          'text-text-2': primary,
-          'text-text-3': secondary,
+          'text-text-1': primary,
+          'text-text-2': secondary,
+          'text-text-3': tetriary,
           'font-titilium-bold': bold,
         },
       )}
